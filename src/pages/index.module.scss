@@ -1,10 +1,11 @@
 .section {
   h2 {
-    font-size: 2rem;
+    font-size: 2.5em;
     font-weight: 900;
   }
 
   h3 {
+    font-size: 2em;
     font-weight: 700;
   }
 
@@ -73,6 +74,16 @@
   box-shadow: var(--ifm-global-shadow-tl);
   display: block;
   position: relative;
+}
+
+.codeBlock {
+  background: var(--electron-color-dark);
+  color: var(--electron-color-light);
+  padding: 2rem;
+}
+.exploreSubtext {
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
 
 .heroElectron {

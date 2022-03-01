@@ -394,37 +394,91 @@ export default function Home() {
               <Link to="https://snapcraft.io/store">Snap Store</Link> (Linux).
             </Feature>
           </div>
-          <div
-            className={clsx(styles.section)}
-            style={{ background: 'WhiteSmoke' }}
-          >
-            <h2>Try Electron out</h2>
-            <p>To get started with Electron, check out the resources below.</p>
-            <div className="row">
-              <div className="col col--6">
-                <h3>Install Electron</h3>
-                <p></p>
+        </div>
+        <div style={{ background: 'WhiteSmoke' }}>
+          <div className="container">
+            <div className={clsx(styles.section)}>
+              <h2>Try Electron out</h2>
+              <p>
+                Not everyone learns in the same way. To get started with
+                Electron, check out the resources below.
+              </p>
+              <div className="row">
+                <div className="col col--6">
+                  <span className={styles.exploreSubtext}>Nice and easy</span>
+                  <h3>Tutorial</h3>
+                  <p>
+                    Electron&apos;s quick start tutorial will expose you to a
+                    mix of theory and practical code that will get you
+                    developing desktop apps like a pro in no time. Learn how to
+                    run a web app in Electron, package your application, and
+                    distribute it to end users.
+                  </p>
+                  <Link
+                    to="/docs/latest/tutorial/installation"
+                    className="button button--electron"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+                <div className="col col--6"></div>
+                <div className="col col--6">
+                  <span className={styles.exploreSubtext}>Jump right in</span>
+                  <h3>Installation</h3>
+                  <p>
+                    We recommend you install Electron locally through your
+                    preferred package manager. For a production-ready
+                    experience, install the latest stable version. If you want
+                    something a bit more experimental, try the beta or nightly
+                    channels.
+                  </p>
+                  <Link
+                    to="/docs/latest/tutorial/installation"
+                    className="button button--electron"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+                <div className="col col--6">
+                  <pre className={styles.codeBlock}>
+                    <code>
+                      <span className="no-select">$ </span>npm install
+                      --save-dev electron@latest
+                      <span className="no-select">
+                        <br /># Electron 17.1.0
+                        <br /># Node 16.13.0
+                        <br /># Chromium 98.0.4758.102
+                      </span>
+                    </code>
+                  </pre>
+                </div>
+                <div className="col col--6">
+                  <span className={styles.exploreSubtext}>
+                    Experiment deeper
+                  </span>
+                  <h3>Electron Fiddle</h3>
+                  <p>
+                    Electron Fiddle lets you create and play with small Electron
+                    experiments. It greets you with a quick-start template after
+                    opening — change a few things, choose the version of
+                    Electron you want to run it with, and play around. Then,
+                    save your Fiddle either as a GitHub Gist or to a local
+                    folder. Once pushed to GitHub, anyone can quickly try your
+                    Fiddle out by just entering it in the address bar.
+                  </p>
+                  <Link
+                    to="https://github.com/electron/fiddle"
+                    className="button button--electron"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+                <div className="col col--6"></div>
               </div>
-              <div className="col col--6"></div>
-              <div className="col col--6">
-                <h3>Clone the quick start repo</h3>
-              </div>
-              <div className="col col--6"></div>
-              <div className="col col--6">
-                <h3>Play around with Electron Fiddle</h3>
-                <p>
-                  Electron Fiddle lets you create and play with small Electron
-                  experiments. It greets you with a quick-start template after
-                  opening — change a few things, choose the version of Electron
-                  you want to run it with, and play around. Then, save your
-                  Fiddle either as a GitHub Gist or to a local folder. Once
-                  pushed to GitHub, anyone can quickly try your Fiddle out by
-                  just entering it in the address bar.
-                </p>
-              </div>
-              <div className="col col--6"></div>
             </div>
           </div>
+        </div>
+        <div className="container">
           <div className={clsx(styles.section)} style={{ textAlign: 'center' }}>
             <h2>Apps users love, built with Electron</h2>
             <p>
