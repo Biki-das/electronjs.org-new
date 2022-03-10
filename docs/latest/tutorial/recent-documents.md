@@ -12,11 +12,11 @@ hide_title: true
 Windows and macOS provide access to a list of recent documents opened by
 the application via JumpList or dock menu, respectively.
 
-__JumpList:__
+**JumpList:**
 
 ![JumpList Recent Files][jumplist-image]
 
-__Application dock menu:__
+**Application dock menu:**
 
 ![macOS Dock Menu][dock-menu-image]
 
@@ -98,14 +98,14 @@ following code snippet to your menu template:
 
 ```json
 {
-  "submenu":[
+  "submenu": [
     {
-      "label":"Open Recent",
-      "role":"recentdocuments",
-      "submenu":[
+      "label": "Open Recent",
+      "role": "recentdocuments",
+      "submenu": [
         {
-          "label":"Clear Recent",
-          "role":"clearrecentdocuments"
+          "label": "Clear Recent",
+          "role": "clearrecentdocuments"
         }
       ]
     }
@@ -117,16 +117,16 @@ Make sure the application menu is added after the [`'ready'`](latest/api/app.md#
 event and not before, or the menu item will be disabled:
 
 ```javascript
-const { app, Menu } = require('electron')
+const { app, Menu } = require('electron');
 
 const template = [
   // Menu template here
-]
-const menu = Menu.buildFromTemplate(template)
+];
+const menu = Menu.buildFromTemplate(template);
 
 app.whenReady().then(() => {
-  Menu.setApplicationMenu(menu)
-})
+  Menu.setApplicationMenu(menu);
+});
 ```
 
 ![macOS Recent Documents menu item][menu-item-image]
@@ -134,7 +134,7 @@ app.whenReady().then(() => {
 When a file is requested from the recent documents menu, the `open-file` event
 of `app` module will be emitted for it.
 
-[jumplist-image]: https://cloud.githubusercontent.com/assets/2289/23446924/11a27b98-fdfc-11e6-8485-cc3b1e86b80a.png
+[jumplist-image]: https://i.postimg.cc/G34vLmcG/electron.png
 [dock-menu-image]: https://cloud.githubusercontent.com/assets/639601/5069610/2aa80758-6e97-11e4-8cfb-c1a414a10774.png
 [addrecentdocument]: latest/api/app.md#appaddrecentdocumentpath-macos-windows
 [clearrecentdocuments]: latest/api/app.md#appclearrecentdocuments-macos-windows
